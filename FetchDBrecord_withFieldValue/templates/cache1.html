@@ -1,0 +1,19 @@
+<form  method="POST">  
+<br>
+<br>
+<br>
+    {% csrf_token %}
+    {{ form }}
+	
+	<br>
+	<br>
+	<table>
+	 <tr>
+	<td> Entry :  {{ entry.title }} </td>
+	<td> Entry Id :  {{ entry.id }} </td>
+	 </tr>
+	</table>
+    <input type="submit" action="{% url 'cache1test' %}" value="Submit" />
+	<input type="submit" value="getdata" />
+	<input type="text" value="{{entry2.title}}  Id: {{entry2.id}}" />
+</form>
