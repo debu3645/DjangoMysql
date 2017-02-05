@@ -1,0 +1,45 @@
+<form action="{% url 'pdfpdf' %}" method="GET">  
+<br>
+<br>
+<br>
+    {% csrf_token %}
+    {{ form10 }}
+	<br>
+	<br>
+
+	<table>
+        <tr>
+            <td>Name</td>
+            <td>Address</td>
+            <td>MObile
+</td>
+        </tr>
+	{% for univer in object_list %}
+	
+            <tr>
+			
+                <td><a href="">{{ univer.Name }}</a></td> 
+                <td>{{ univer.Address }}</td>
+                <td>{{ univer.Mobile }}</td>
+				<br>
+            </tr>
+			
+        {% endfor %}
+ 
+	</table>
+	<br></br>
+
+    <input type="submit" value="Submit" />
+	</form>
+	
+	<form action="{% url 'pdfpdf' %}" method="POST" >  
+	
+	{% csrf_token %}
+	{{ form10 }}
+	 <input type="submit" value="PDF Format" />
+	 </form>
+	 
+<a href="{% url "createcollege" %}">Create college</a>
+
+
+	

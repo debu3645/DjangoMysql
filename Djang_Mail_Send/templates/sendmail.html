@@ -1,0 +1,9 @@
+<form action="{% url 'mails2' %}" method=”post”>
+<br>
+    {% csrf_token %}
+	<br>Hi. This is for checking if mails can be sent from Django
+	<br>
+
+    <input type="submit" action="{% url 'mails2' %}" value="Submit" />
+
+</form>

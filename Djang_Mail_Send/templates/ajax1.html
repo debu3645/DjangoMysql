@@ -1,0 +1,26 @@
+<script src = "{% static '/static/js/jquery-3.1.1.min.js' %}" 
+   type = "text/javascript" charset = "utf-8"></script>
+<script src = "{% static '/static/js/jquery.dajax.core.js' %}"></script>
+
+<script>
+
+   function send_form(){
+      Dajaxice.Vineet24janapp.send_form(Dajax.process,{'form':$('#my_form').serialize(true)});
+   }
+</script>
+
+<form  method="POST" id="my_form">  
+<br>
+<br>
+<br>
+    {% csrf_token %}
+    {{ form }}
+	<br>
+	<br>
+	<!--
+    <input type="submit" action="{% url 'saveinmysql' %}" value="Submit" />
+	-->
+	 <input type="submit" value="Submit" onclick="send_form(my_form)" />
+	
+	<input type="submit" value="getdata" />
+</form>

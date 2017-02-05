@@ -1,0 +1,34 @@
+<form action="{% url 'saveregister1' %}" method="POST">  
+<br>
+<br>
+<br>
+    {% csrf_token %}
+    {{ form }}
+	<br>
+	<br>
+    <input type="submit" value="Submit" />
+	<table>
+        <tr>
+            <td>Name</td>
+            <td>Address</td>
+            <td>MObile
+</td>
+        </tr>
+	{% for univer in object_list %}
+	{% if univer.Name == 'Adrian' %}
+            <tr>
+			
+                <td><a href="">{{ univer.Name }}</a></td> 
+                <td>{{ univer.Address }}</td>
+                <td>{{ univer.Mobile }}</td>
+				<br>
+            </tr>
+			{% endif %}
+        {% endfor %}
+	</table>
+
+<a href="{% url "createcollege" %}">Create college</a>
+
+
+	
+</form>

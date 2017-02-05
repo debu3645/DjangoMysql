@@ -1,0 +1,14 @@
+<html>
+<head>
+ <title>Cache</title>
+</head>
+<body>
+{% csrf_token %}
+{{name}}
+{% load cache %}
+{% cache 20 name %}
+   {{name}}
+{% endcache %}
+<label> XXXXX : {{name}}
+</body>
+</html>

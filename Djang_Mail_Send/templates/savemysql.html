@@ -1,0 +1,14 @@
+<form  method="POST" id="my_form">  
+<br>
+<br>
+<br>
+    {% csrf_token %}
+    {{ form }}
+	<br>
+	<br>
+
+    <input type="submit" action="{% url 'saveinmysql' %}" value="Submit" />
+
+	
+	<input type="submit" value="getdata" />
+</form>

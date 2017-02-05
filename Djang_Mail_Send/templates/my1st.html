@@ -1,0 +1,38 @@
+<html>
+<body>
+<h1> django test with html...Values:{{my_hello | upper}}   {{my_hello | lower}}  {{my_hello | capfirst}}</h1>
+
+
+      <table border-collapse: collapse>
+	   
+	<th scope="col" >PROJECT</th>
+		<th scope="col" >DESCRIPTION</th>
+	<th scope="col">CLIENT</th>
+		
+              {% for arr in my_proj_list %}
+                <tr>
+               <td>   {{ arr.Title }}  {{ arr.description }}    {{ arr.client }} <BR> </td>
+               </tr>
+              {% endfor %}
+           
+      </table>
+		<span>
+              {% if my_age < 10 %}
+               <h2> You are a children </h2>
+              {% elif my_age < 18 %}
+             <h2>   You are a teenagerh2> </h2>
+              {% else %}
+              <h2>   You are an adult! </h2>
+              {% endif %}
+            </span>
+
+			<ul>
+              {% for arr in my_proj_list %}
+                <li>
+                <h3>  {{ arr.Title }} </h3>
+                </li>
+              {% endfor %}
+            </ul>
+			
+</body>
+</html>

@@ -1,0 +1,7 @@
+<form action="{% url 'create' %}" method=”post”>
+{% csrf_token %}
+{{ form.as_p }}
+<p>Hello.. This is Viny..Testing of CreateView</p>
+
+<input type=submit>
+</form>
